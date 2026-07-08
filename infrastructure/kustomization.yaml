@@ -3,9 +3,8 @@ kind: Kustomization
 
 resources:
   - namespaces/application.yaml
-  # We'll uncomment these as we create them:
-  # - longhorn/application.yaml
-  # - cert-manager/application.yaml
-  # - monitoring/application.yaml
-  # - percona/application.yaml
-  # - ../applications/mysql/application.yaml
+  - longhorn/application.yaml
+  - cert-manager/application.yaml
+  - monitoring/application.yaml
+  - percona/application.yaml
+  - ../applications/mysql/application.yaml
