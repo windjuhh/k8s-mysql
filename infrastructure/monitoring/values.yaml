@@ -1,0 +1,35 @@
+grafana:
+
+  ingress:
+
+    enabled: true
+
+    ingressClassName: traefik
+
+    hosts:
+
+      - grafana.home.windjuh.de
+
+prometheus:
+
+  prometheusSpec:
+
+    retention: 7d
+
+    storageSpec:
+
+      volumeClaimTemplate:
+
+        spec:
+
+          storageClassName: longhorn
+
+          accessModes:
+
+            - ReadWriteOnce
+
+          resources:
+
+            requests:
+
+              storage: 5Gi
